@@ -1,0 +1,220 @@
+name: quill_with_llm
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  cupertino_icons: ^1.0.8
+  diff_match_patch: ^0.4.1
+  firebase_core: ^3.13.0
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^5.2.1
+  flutter_quill: ^11.4.0
+  flutter_quill_extensions: ^11.0.0
+  flutter_quill_to_pdf: ^2.3.7
+  google_generative_ai: ^0.4.7
+  path_provider: ^2.1.5
+  pdf: ^3.11.3
+  printing: ^5.14.2
+  universal_html: ^2.2.4
+  vsc_quill_delta_to_html: ^1.0.5
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/lora/Lora-Regular.ttf
+        - asset: assets/fonts/lora/Lora-Italic.ttf
+          style: italic
+        - asset: assets/fonts/lora/Lora-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/lora/Lora-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Courier
+      fonts:
+        - asset: assets/fonts/Courier/CourierPrime-Regular.ttf
+        - asset: assets/fonts/Courier/CourierPrime-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Courier/CourierPrime-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Courier/CourierPrime-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Crimson
+      fonts:
+        - asset: assets/fonts/crimson/crimson.ttf
+        - asset: assets/fonts/crimson/crimson-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/crimson/crimson-Italic.ttf
+          style: italic
+        - asset: assets/fonts/crimson/crimson-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Philosopher
+      fonts:
+        - asset: assets/fonts/philosopher/philosopher.ttf
+        - asset: assets/fonts/philosopher/philosopher-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/philosopher/philosopher-Italic.ttf
+          style: italic
+        - asset: assets/fonts/philosopher/philosopher-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: LobsterTwo
+      fonts:
+        - asset: assets/fonts/lobster/lobsterTwo.ttf
+        - asset: assets/fonts/lobster/lobsterTwo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/lobster/lobsterTwo-Italic.ttf
+          style: italic
+        - asset: assets/fonts/lobster/lobsterTwo-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Tinos
+      fonts:
+        - asset: assets/fonts/Tinos/Tinos-Regular.ttf
+          weight: 300
+        - asset: assets/fonts/Tinos/Tinos-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Tinos/Tinos-Italic.ttf
+          style: italic
+          weight: 400
+        - asset: assets/fonts/Tinos/Tinos-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Inria Serif
+      fonts:
+        - asset: assets/fonts/Inria_Serif/InriaSerif-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inria_Serif/InriaSerif-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inria_Serif/InriaSerif-Italic.ttf
+          style: italic
+          weight: 400
+        - asset: assets/fonts/Inria_Serif/InriaSerif-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Open_Sans/static/OpenSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Italic.ttf
+          style: italic
+          weight: 400
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Regular.ttf
+          weight: 400
+
+    - family: Noto Sans
+      fonts:
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-Light.ttf
+          weight: 200
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-Black.ttf
+          weight: 800
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Noto_Sans/static/NotoSans-Regular.ttf
+          weight: 400
+
+    - family: raleway
+      fonts:
+        - asset: assets/fonts/Raleway/Raleway-VariableFont_wght.ttf
+          weight: 500
+
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lato/Lato-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Lato/Lato-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Noto Emojis
+      fonts:
+        - asset: assets/fonts/unicodes/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf
+
+    - family: Ubuntu Mono
+      fonts:
+        - asset: assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Ubuntu_Mono/UbuntuMono-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf
+          weight: 700
+          style: italic
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
